@@ -21,6 +21,7 @@ public class CalcEngine
         displayValue = 0;
         previousOperator = ' ';
         leftOperand = 0;
+        reportState("end of constructor");
     }
 
     /**
@@ -62,9 +63,11 @@ public class CalcEngine
      */
     public void minus()
     {
+        System.out.println("minus called");
         applyPreviousOperator();
         previousOperator = '-';
         displayValue = 0;
+        reportState("end of minus");
     }
     
     /**
